@@ -1,0 +1,7 @@
+parameters:
+    slot_http.client.class: Slot\HttpBundle\Client
+
+services:
+    slot_http.client:
+        class: %slot_http.client.class%
+        arguments: [ @monolog.logger, @filesystem ]
