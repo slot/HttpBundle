@@ -220,7 +220,7 @@ class Client
      *
      * @param $logger
      */
-    public function __construct($logger, Filesystem $filesystem)
+    public function __construct($logger, $filesystem)
     {
         $this->logger = $logger;
         $this->filesystem = $filesystem;
@@ -413,7 +413,7 @@ class Client
      * @throws HttpClientException
      * @return Client
      */
-    protected function prepareUrl()
+    public function prepareUrl()
     {
         $url = trim($this->url);
 
@@ -740,5 +740,293 @@ class Client
         }
 
         return $savePath;
+    }
+
+    /**
+     * @param boolean $compression
+     */
+    public function setCompression($compression)
+    {
+        $this->compression = $compression;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getCompression()
+    {
+        return $this->compression;
+    }
+
+    /**
+     * @param Resource $connection
+     */
+    public function setConnection($connection)
+    {
+        $this->connection = $connection;
+    }
+
+    /**
+     * @return Resource
+     */
+    public function getConnection()
+    {
+        return $this->connection;
+    }
+
+    /**
+     * @param \Symfony\Component\Filesystem\Filesystem $filesystem
+     */
+    public function setFilesystem($filesystem)
+    {
+        $this->filesystem = $filesystem;
+    }
+
+    /**
+     * @return \Symfony\Component\Filesystem\Filesystem
+     */
+    public function getFilesystem()
+    {
+        return $this->filesystem;
+    }
+
+    /**
+     * @param array $headers
+     */
+    public function setHeaders($headers)
+    {
+        $this->headers = $headers;
+    }
+
+    /**
+     * @return array
+     */
+    public function getHeaders()
+    {
+        return $this->headers;
+    }
+
+    /**
+     * @param string $host
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * @param \Symfony\Bridge\Monolog\Logger $logger
+     */
+    public function setLogger($logger)
+    {
+        $this->logger = $logger;
+    }
+
+    /**
+     * @return \Symfony\Bridge\Monolog\Logger
+     */
+    public function getLogger()
+    {
+        return $this->logger;
+    }
+
+    /**
+     * @param string $method
+     */
+    public function setMethod($method)
+    {
+        $this->method = $method;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return $this->method;
+    }
+
+    /**
+     * @param  $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $path
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * @param string $port
+     */
+    public function setPort($port)
+    {
+        $this->port = $port;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPort()
+    {
+        return $this->port;
+    }
+
+    /**
+     * @param array $postData
+     */
+    public function setPostData($postData)
+    {
+        $this->postData = $postData;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPostData()
+    {
+        return $this->postData;
+    }
+
+    /**
+     * @param string $query
+     */
+    public function setQuery($query)
+    {
+        $this->query = $query;
+    }
+
+    /**
+     * @return string
+     */
+    public function getQuery()
+    {
+        return $this->query;
+    }
+
+    /**
+     * @param array $responseHeaders
+     */
+    public function setResponseHeaders($responseHeaders)
+    {
+        $this->responseHeaders = $responseHeaders;
+    }
+
+    /**
+     * @return array
+     */
+    public function getResponseHeaders()
+    {
+        return $this->responseHeaders;
+    }
+
+    /**
+     * @param boolean $ssl
+     */
+    public function setSsl($ssl)
+    {
+        $this->ssl = $ssl;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSsl()
+    {
+        return $this->ssl;
+    }
+
+    /**
+     * @param int $totalRedirects
+     */
+    public function setTotalRedirects($totalRedirects)
+    {
+        $this->totalRedirects = $totalRedirects;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTotalRedirects()
+    {
+        return $this->totalRedirects;
+    }
+
+    /**
+     * @param int $totalRetries
+     */
+    public function setTotalRetries($totalRetries)
+    {
+        $this->totalRetries = $totalRetries;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTotalRetries()
+    {
+        return $this->totalRetries;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
