@@ -1,7 +1,7 @@
 SlotHttpClient - A simple socket based HTTP Client
 ==================================================
 
-[![Build Status](https://secure.travis-ci.org/sonata-project/SonataAdminBundle.png?branch=master)](http://travis-ci.org/sonata-project/SonataAdminBundle)
+[![Build Status](https://secure.travis-ci.org/slot/HttpBundle.png?branch=master)](http://travis-ci.org/slot/HttpBundle)
 
 Some text
 
