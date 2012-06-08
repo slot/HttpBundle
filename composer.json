@@ -1,0 +1,25 @@
+{
+    "name": "slot/HttpBundle",
+    "type": "symfony-bundle",
+    "description": "Symfony HttpBundle",
+    "keywords": ["http", "client", "curl", "post"],
+    "homepage": "http://github.com/slot/httpbundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sven Loth",
+            "email": "sven.loth@me.com",
+            "homepage": ""
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+
+        "symfony/symfony": "2.0.*",
+        "symfony/framework-bundle": "2.0.*"
+    },
+    "autoload": {
+        "psr-0": { "Slot\\HttpBundle": "" }
+    },
+    "target-dir": "Slot/HttpBundle"
+}

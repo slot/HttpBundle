@@ -15,7 +15,7 @@ class HttpClientCommand extends ContainerAwareCommand
     {
         $this
             ->setName('http:client')
-            ->setDescription('Opacco HTTP Command Line Client')
+            ->setDescription('HTTP Command Line Client')
             ->addArgument('url', InputArgument::REQUIRED, 'The URL zu query.')
             ->addOption('method', '', InputOption::VALUE_REQUIRED, '')
         ;
@@ -26,7 +26,7 @@ class HttpClientCommand extends ContainerAwareCommand
 
             $dialog = $this->getDialogHelper();
 
-            $dialog->writeSection($output, 'Opacco HTTP client');
+            $dialog->writeSection($output, 'HTTP client');
             $output->writeln(array('<comment>Query a URL with get or post method</comment>'));
 
             $method = $dialog->askAndValidate(
