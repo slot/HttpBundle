@@ -12,3 +12,7 @@ before_script:
   - php composer.phar install
 
 script: phpunit
+
+notifications:
+  email:
+    - sven.loth@me.com
