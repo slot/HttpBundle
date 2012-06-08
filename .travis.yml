@@ -12,6 +12,3 @@ before_script:
   - php composer.phar install
 
 script: phpunit
-
-notifications:
-    webhooks: http://sonata-project.org/bundles/admin/2-0/travis
